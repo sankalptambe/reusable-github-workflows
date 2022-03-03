@@ -7,16 +7,14 @@ on:
         description: Stage
         required: true
         type: string
-    secrets:
-      MY_SECRET:
-        description: Caller secret
-        required: true
+    # secrets:
+    #   MY_SECRET:
+    #     description: Caller secret
+    #     required: true
 jobs:
   build:
     environment: 
       name: reuse
-    env:
-      i_am:  ${{ secrets.MY_SECRET }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
