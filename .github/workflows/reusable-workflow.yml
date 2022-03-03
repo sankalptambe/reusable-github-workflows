@@ -8,7 +8,7 @@ on:
         required: true
         type: string
     secrets:
-      my_caller_secret:
+      MY_SECRET:
         description: Caller secret
         required: true
 jobs:
@@ -16,7 +16,7 @@ jobs:
     environment: 
       name: reuse
     env:
-      i_am:  ${{ secrets.my_caller_secret }}
+      i_am:  ${{ secrets.MY_SECRET }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,4 +26,4 @@ jobs:
         run: echo Hello, world! I am in - ${{ inputs.stage }}
         
       - name: What is my secret
-        run: echo My secret is - ${{secrets.my_caller_secret}} | sed 's/./& /g'
+        run: echo My secret is - ${{secrets.MY_SECRET}} | sed 's/./& /g'
