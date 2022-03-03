@@ -6,7 +6,7 @@ on:
       stage:
         description: Stage
         required: true
-        type : string
+        type: string
     secrets:
       my_caller_secret:
         description: Caller secret
