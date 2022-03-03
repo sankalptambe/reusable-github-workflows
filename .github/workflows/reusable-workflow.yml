@@ -11,7 +11,6 @@ on:
       my_caller_secret:
         description: Caller secret
         required: true
-        type: string
 jobs:
   build:
     environment: 
