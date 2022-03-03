@@ -16,7 +16,7 @@ jobs:
     environment: 
       name: reuse
     env:
-      i_am:  ${{ secrets.MY_SECRET }}
+      i_am:  ${{ secrets.my_caller_secret }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
