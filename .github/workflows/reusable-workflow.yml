@@ -7,10 +7,10 @@ on:
         description: Stage
         required: true
         type: string
-    # secrets:
-    #   MY_SECRET:
-    #     description: Caller secret
-    #     required: true
+    secrets:
+      MY_SECRET:
+        description: Caller secret
+        required: true
 jobs:
   build:
     environment: 
