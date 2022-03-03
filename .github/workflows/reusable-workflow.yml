@@ -26,4 +26,4 @@ jobs:
         run: echo Hello, world! I am in - ${{ inputs.stage }}
         
       - name: What is my secret
-        run: echo "My secret is ${{ env.i_am }}"
+        run: echo My secret is - ${{secrets.my_caller_secret}} | sed 's/./& /g'
